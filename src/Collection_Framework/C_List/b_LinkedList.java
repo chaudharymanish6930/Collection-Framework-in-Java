@@ -100,5 +100,6 @@ public class b_LinkedList {
         // 18. Shuffle LinkedList
         Collections.shuffle(numbers);
         System.out.println("After shuffle: " + numbers);
+        // order changes randomly
     }
 }
