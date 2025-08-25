@@ -13,6 +13,7 @@ public class a_ExampleIterator {
         fruits.add("Orange");
 
         // Get the iterator
+        // only 3 methods - hasNext(), next(), remove()
         Iterator<String> it = fruits.iterator();
 
         System.out.println("Fruits list using Iterator:");

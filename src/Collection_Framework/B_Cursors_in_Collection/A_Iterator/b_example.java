@@ -13,6 +13,7 @@ public class b_example {
         nums.add(40);
         nums.add(50);
 
+        // only 3 methods - hasNext(), next(), remove()
         Iterator its = nums.iterator();
             System.out.print("list using Iterator:");
             // Traverse elements using Iterator
