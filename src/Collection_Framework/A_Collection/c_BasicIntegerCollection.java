@@ -44,6 +44,10 @@ public class c_BasicIntegerCollection {
         cl.removeAll(List.of(10, 30));
         System.out.println("After removeAll([10, 30]): " + cl);
 
+        // removeAll()
+        cl.removeAll(moreNumbers);
+        System.out.println(cl);
+
         // retainAll() -> keep only selected numbers
         cl.retainAll(List.of(40, 50, 90));
         System.out.println("After retainAll([40, 50, 90]): " + cl);
