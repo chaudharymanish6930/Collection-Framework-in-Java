@@ -41,6 +41,10 @@ public class a_ArrayList {
         // 9. Check if ArrayList is empty
         System.out.println("Is ArrayList empty? " + numbers.isEmpty());
 
+        // clone
+        ArrayList<String> cloned = (ArrayList<String>) numbers.clone();
+        System.out.println("Clones :"+cloned);
+
         // 10. Traverse using for-each
         System.out.println("Traverse using for-each:");
         for (int num : numbers) {

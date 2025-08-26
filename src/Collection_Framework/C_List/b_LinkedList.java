@@ -56,6 +56,10 @@ public class b_LinkedList {
         // 10. Check if LinkedList is empty
         System.out.println("Is LinkedList empty? " + numbers.isEmpty());
 
+        //  clone
+        LinkedList<String> clonedLL = (LinkedList<String>) numbers.clone();
+        System.out.println(clonedLL);  // [X, Y]
+
         // 11. Traverse using for-each
         System.out.println("Traverse using for-each:");
         for (int num : numbers) {

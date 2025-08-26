@@ -49,6 +49,9 @@ public class c_Vector {
         // 10. Check if Vector is empty
         System.out.println("Is Vector empty? " + numbers.isEmpty());
 
+        Vector<Integer> clonedV = (Vector<Integer>) numbers.clone();
+        System.out.println("Clone :"+clonedV);  // [10, 20]
+
         // 11. Traverse using for-each
         System.out.println("Traverse using for-each:");
         for (int num : numbers) {
