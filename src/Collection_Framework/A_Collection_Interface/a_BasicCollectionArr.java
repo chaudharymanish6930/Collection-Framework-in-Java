@@ -1,28 +1,30 @@
-package Collection_Framework.A_Collection;
+package Collection_Framework.A_Collection_Interface;
 
-import java.util.Collection;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Arrays; // specifically for Arrays.toString()
 
-public class b_BasicCollection {
+public class a_BasicCollectionArr {
     public static void main(String[] args){
-        // Create a Collection (ArrayList implementation)
         Collection<String> cl = new ArrayList<>();
-
         // add()
         cl.add("Apple");
         cl.add("Banana");
         cl.add("Orange");
         System.out.println("After add(): " + cl);
 
-        // size()
+        // size()  --> count elements
         System.out.println("Size: " + cl.size());
 
-        // isEmpty()
+        // isEmpty()  --> return boolean value
         System.out.println("Is empty? " + cl.isEmpty());
 
-        // contains()
+        // contains()   --> return boolean value
         System.out.println("Contains Banana? " + cl.contains("Banana"));
+
+        // toArray()
+        Object[] arr = cl.toArray();
+        System.out.println("toArray(): " + Arrays.toString(arr));
 
         // remove()
         cl.remove("Banana");
@@ -36,22 +38,20 @@ public class b_BasicCollection {
         System.out.println("After addAll(): " + cl);
 
         // containsAll()
-        System.out.println("Contains all [Apple, Mango]? " + cl.containsAll(List.of("Apple", "Mango")));
+        System.out.println("Contains all [Apple, ango]? " + cl.containsAll(Arrays.asList("Apple", "ango")));
+        System.out.println("Contains all [Apple, Mango]? " + cl.containsAll(Arrays.asList("Apple", "Mango")));
 
         // removeAll()
-        // retainAll acts like an intersection between two collections
-        cl.removeAll(List.of("Apple", "Orange"));
+        cl.removeAll(Arrays.asList("Apple", "Orange"));
         System.out.println("After removeAll(): " + cl);
 
         // retainAll()
-        cl.retainAll(List.of("Mango","Apple","Banana"));
-        System.out.println("After retainAll(): " + cl);
-
-        cl.retainAll(List.of("Mango","organge","grapes"));
+        cl.retainAll(Arrays.asList("Mango"));
         System.out.println("After retainAll(): " + cl);
 
         // clear()
         cl.clear();
         System.out.println("After clear(): " + cl);
+
     }
 }

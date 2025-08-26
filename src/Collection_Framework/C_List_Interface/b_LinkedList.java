@@ -1,11 +1,11 @@
-package Collection_Framework.C_List;
+package Collection_Framework.C_List_Interface;
 
 import java.util.*;
 
-public class a_ArrayList {
+public class b_LinkedList {
     public static void main(String[] args) {
-        // 1. Create an ArrayList
-        ArrayList<Integer> numbers = new ArrayList<>();
+        // 1. Create a LinkedList
+        LinkedList<Integer> numbers = new LinkedList<>();
 
         // 2. Add elements
         numbers.add(10);
@@ -18,41 +18,56 @@ public class a_ArrayList {
         numbers.add(2, 25); // inserts 25 at index 2
         System.out.println("After add at index 2: " + numbers);
 
-        // 4. Access elements
-        System.out.println("Element at index 3: " + numbers.get(3));
+        // 4. Add element at first and last
+        numbers.addFirst(5);
+        numbers.addLast(50);
+        System.out.println("After addFirst and addLast: " + numbers);
 
-        // 5. Update elements
+        // 5. Access elements
+        System.out.println("Element at index 3: " + numbers.get(3));
+        System.out.println("First element: " + numbers.getFirst());
+        System.out.println("Last element: " + numbers.getLast());
+
+        // 6. Update elements
         numbers.set(1, 15); // set index 1 to 15
         System.out.println("After set at index 1: " + numbers);
 
-        // 6. Remove elements
+        // 7. Remove elements
         numbers.remove(0); // remove element at index 0
-        System.out.println("After remove index 0: " + numbers);
+        //  remove(datatype.valueof("value"))
         numbers.remove(Integer.valueOf(30)); // remove element 30
-        System.out.println("After remove element 30: " + numbers);
+        numbers.removeFirst(); // remove first element
+        numbers.removeLast();  // remove last element
+        System.out.println("After remove operations: " + numbers);
 
-        // 7. Size of ArrayList
-        System.out.println("Size of ArrayList: " + numbers.size());
+        // 7a. Peek and Poll
+        System.out.println("Peek first element: " + numbers.peek()); // just view top element
+        System.out.println("Poll first element: " + numbers.poll()); // remove first element
+        System.out.println("After poll: " + numbers);
 
-        // 8. Check if element exists
+
+        // 8. Size of LinkedList
+        System.out.println("Size of LinkedList: " + numbers.size());
+
+        // 9. Check if element exists
         System.out.println("Contains 25? " + numbers.contains(25));
-        System.out.println("Contains 50? " + numbers.contains(50));
+        System.out.println("Contains 100? " + numbers.contains(100));
 
-        // 9. Check if ArrayList is empty
-        System.out.println("Is ArrayList empty? " + numbers.isEmpty());
+        // 10. Check if LinkedList is empty
+        System.out.println("Is LinkedList empty? " + numbers.isEmpty());
 
-        // clone
-        ArrayList<String> cloned = (ArrayList<String>) numbers.clone();
-        System.out.println("Clones :"+cloned);
+        //  clone
+        LinkedList<String> clonedLL = (LinkedList<String>) numbers.clone();
+        System.out.println(clonedLL);  // [X, Y]
 
-        // 10. Traverse using for-each
+        // 11. Traverse using for-each
         System.out.println("Traverse using for-each:");
         for (int num : numbers) {
             System.out.print(num + " ");
         }
         System.out.println();
 
-        // 11. Traverse using Iterator
+        // 12. Traverse using Iterator
         System.out.println("Traverse using Iterator:");
         Iterator<Integer> it = numbers.iterator();
         while (it.hasNext()) {
@@ -60,7 +75,7 @@ public class a_ArrayList {
         }
         System.out.println();
 
-        // 12. Traverse using ListIterator
+        // 13. Traverse using ListIterator
         System.out.println("Traverse using ListIterator forward:");
         ListIterator<Integer> listIt = numbers.listIterator();
         while (listIt.hasNext()) {
@@ -74,32 +89,33 @@ public class a_ArrayList {
         }
         System.out.println();
 
-        // 13. Clear ArrayList
+        // 14. Clear LinkedList
         numbers.clear();
         System.out.println("After clear: " + numbers);
 
-        // 14. Add elements again for sorting
+        // 15. Add elements again for sorting
         numbers.add(50);
         numbers.add(20);
         numbers.add(40);
         numbers.add(10);
 
-        // 15. Sort ArrayList with collection
+        // 16. Sort LinkedList
         Collections.sort(numbers);
         System.out.println("After sort: " + numbers);
 
-        // 16. Reverse ArrayList with collection
+        // 17. Reverse LinkedList
         Collections.reverse(numbers);
         System.out.println("After reverse: " + numbers);
 
-        // 17. Shuffle ArrayList
+        // 18. Shuffle LinkedList
         Collections.shuffle(numbers);
         System.out.println("After shuffle: " + numbers);
+        // order changes randomly
 
-        // --- Collection methods on ArrayList ---
+        // --- Collection methods on LinkedList ---
 
         // addAll(Collection)
-        ArrayList<Integer> moreNumbers = new ArrayList<>();
+        LinkedList<Integer> moreNumbers = new LinkedList<>();
         moreNumbers.add(60);
         moreNumbers.add(70);
         moreNumbers.add(80);
@@ -111,10 +127,11 @@ public class a_ArrayList {
         System.out.println("After removeAll: " + numbers);
 
         // retainAll(Collection) - keeps only common elements
-        ArrayList<Integer> retainSet = new ArrayList<>();
+        LinkedList<Integer> retainSet = new LinkedList<>();
         retainSet.add(20);
         retainSet.add(25);
         numbers.retainAll(retainSet);
         System.out.println("After retainAll (keeping only 20 and 25): " + numbers);
+
     }
 }

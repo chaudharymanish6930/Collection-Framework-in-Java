@@ -1,4 +1,4 @@
-package Collection_Framework.C_List;
+package Collection_Framework.C_List_Interface;
 
 import java.util.*;
 

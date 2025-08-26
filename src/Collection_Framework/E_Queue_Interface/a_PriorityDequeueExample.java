@@ -1,6 +1,5 @@
-package Collection_Framework.E_Queue;
+package Collection_Framework.E_Queue_Interface;
 
-import java.util.Queue;
 import java.util.PriorityQueue;
 
 public class a_PriorityDequeueExample {

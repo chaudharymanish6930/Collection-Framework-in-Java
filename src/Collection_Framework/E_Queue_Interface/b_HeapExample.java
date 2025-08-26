@@ -1,4 +1,4 @@
-package Collection_Framework.E_Queue;
+package Collection_Framework.E_Queue_Interface;
 
 import java.util.*;
 

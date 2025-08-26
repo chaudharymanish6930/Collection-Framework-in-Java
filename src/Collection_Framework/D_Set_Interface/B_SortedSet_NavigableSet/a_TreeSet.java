@@ -1,4 +1,4 @@
-package Collection_Framework.D_Set.B_SortedSet_NavigableSet;
+package Collection_Framework.D_Set_Interface.B_SortedSet_NavigableSet;
 
 import java.util.*;
 
