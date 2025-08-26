@@ -105,5 +105,4 @@ public class c_LinkedHashSet {
         // 19. containsAll()
         System.out.println("lhs containsAll cloned? " + lhs.containsAll(cloned));
     }
-
 }
