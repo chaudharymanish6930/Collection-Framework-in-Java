@@ -89,5 +89,26 @@ public class c_Vector {
         // 15. Clear Vector
         numbers.clear();
         System.out.println("After clear: " + numbers);
+
+        // --- Collection methods on Vector ---
+
+        // addAll(Collection)
+        Vector<Integer> moreNumbers = new Vector<>();
+        moreNumbers.add(60);
+        moreNumbers.add(70);
+        moreNumbers.add(80);
+        numbers.addAll(moreNumbers);
+        System.out.println("After addAll: " + numbers);
+
+        // removeAll(Collection)
+        numbers.removeAll(moreNumbers);
+        System.out.println("After removeAll: " + numbers);
+
+        // retainAll(Collection) - keeps only common elements
+        Vector<Integer> retainSet = new Vector<>();
+        retainSet.add(20);
+        retainSet.add(25);
+        numbers.retainAll(retainSet);
+        System.out.println("After retainAll (keeping only 20 and 25): " + numbers);
     }
 }

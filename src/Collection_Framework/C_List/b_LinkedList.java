@@ -107,5 +107,27 @@ public class b_LinkedList {
         Collections.shuffle(numbers);
         System.out.println("After shuffle: " + numbers);
         // order changes randomly
+
+        // --- Collection methods on LinkedList ---
+
+        // addAll(Collection)
+        LinkedList<Integer> moreNumbers = new LinkedList<>();
+        moreNumbers.add(60);
+        moreNumbers.add(70);
+        moreNumbers.add(80);
+        numbers.addAll(moreNumbers);
+        System.out.println("After addAll: " + numbers);
+
+        // removeAll(Collection)
+        numbers.removeAll(moreNumbers);
+        System.out.println("After removeAll: " + numbers);
+
+        // retainAll(Collection) - keeps only common elements
+        LinkedList<Integer> retainSet = new LinkedList<>();
+        retainSet.add(20);
+        retainSet.add(25);
+        numbers.retainAll(retainSet);
+        System.out.println("After retainAll (keeping only 20 and 25): " + numbers);
+
     }
 }

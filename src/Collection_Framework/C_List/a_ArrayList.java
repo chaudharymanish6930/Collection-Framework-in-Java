@@ -91,5 +91,26 @@ public class a_ArrayList {
         // 17. Shuffle ArrayList
         Collections.shuffle(numbers);
         System.out.println("After shuffle: " + numbers);
+
+        // --- Collection methods on ArrayList ---
+
+        // addAll(Collection)
+        ArrayList<Integer> moreNumbers = new ArrayList<>();
+        moreNumbers.add(60);
+        moreNumbers.add(70);
+        moreNumbers.add(80);
+        numbers.addAll(moreNumbers);
+        System.out.println("After addAll: " + numbers);
+
+        // removeAll(Collection)
+        numbers.removeAll(moreNumbers);
+        System.out.println("After removeAll: " + numbers);
+
+        // retainAll(Collection) - keeps only common elements
+        ArrayList<Integer> retainSet = new ArrayList<>();
+        retainSet.add(20);
+        retainSet.add(25);
+        numbers.retainAll(retainSet);
+        System.out.println("After retainAll (keeping only 20 and 25): " + numbers);
     }
 }
