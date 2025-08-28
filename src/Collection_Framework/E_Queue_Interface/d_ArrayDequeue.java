@@ -64,5 +64,6 @@ public class d_ArrayDequeue {
         // ---------------- Clear ----------------
         dq.clear();
         System.out.println("After clear(): " + dq);
+
     }
 }
