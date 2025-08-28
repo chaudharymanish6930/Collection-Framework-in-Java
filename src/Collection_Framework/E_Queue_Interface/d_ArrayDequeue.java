@@ -46,7 +46,6 @@ public class d_ArrayDequeue {
         }
         System.out.println();
 
-
         System.out.print("Iterating backward: ");
         Iterator<Integer> it = dq.descendingIterator();
         while (it.hasNext()) {
