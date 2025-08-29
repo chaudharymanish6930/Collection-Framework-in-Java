@@ -1,4 +1,4 @@
-package Collection_Framework.E_Queue_Interface;
+package Collection_Framework.E_Queue_Interface.A_Priority_Queue;
 
 import java.util.PriorityQueue;
 

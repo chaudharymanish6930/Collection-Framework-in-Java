@@ -1,8 +1,8 @@
-package Collection_Framework.E_Queue_Interface;
+package Collection_Framework.E_Queue_Interface.B_Dequeue;
 
 import java.util.*;
 
-public class d_ArrayDequeue {
+public class a_ArrayDequeue {
     public static void main(String[] args) {
         // Create ArrayDeque
         ArrayDeque<Integer> dq = new ArrayDeque<>();
