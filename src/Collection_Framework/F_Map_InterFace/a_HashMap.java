@@ -3,7 +3,7 @@ package Collection_Framework.F_Map_InterFace;
 import java.util.*;
 public class a_HashMap {
     public static void main(String[] args) {
-        HashMap<Integer, String> map = new HashMap<>();
+        Map<Integer, String> map = new HashMap<>();
 
         // Adding elements
         map.put(1, "Apple");
@@ -14,11 +14,13 @@ public class a_HashMap {
         System.out.println("HashMap: " + map);
 
         // Access value
-        System.out.println("Get value at key 2: " + map.get(2));
+        System.out.println("Get value at key 2: " + map.get(2)); // access by the keys
+        System.out.println("value of 3: "+map.get(3));
 
         // Remove
         map.remove(3);
         System.out.println("After removing key 3: " + map);
+        System.out.println(map.remove(2));
 
         // Contains
         System.out.println("Contains key 1? " + map.containsKey(1));
