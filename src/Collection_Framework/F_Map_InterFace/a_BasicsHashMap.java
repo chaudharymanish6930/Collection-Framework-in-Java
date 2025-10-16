@@ -1,7 +1,7 @@
 package Collection_Framework.F_Map_InterFace;
 
 import java.util.*;
-public class a_HashMap {
+public class a_BasicsHashMap {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<>();
 

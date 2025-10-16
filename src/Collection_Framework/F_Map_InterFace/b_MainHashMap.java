@@ -3,7 +3,7 @@ package Collection_Framework.F_Map_InterFace;
 import java.util.HashMap;
 import java.util.Map;
 
-public class b_HashMap {
+public class b_MainHashMap {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<>();
 

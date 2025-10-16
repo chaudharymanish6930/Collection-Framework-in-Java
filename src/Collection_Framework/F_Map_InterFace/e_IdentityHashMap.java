@@ -1,6 +1,6 @@
 package Collection_Framework.F_Map_InterFace;
 import java.util.*;
-public class e_IdentityHashMap {
+public class   e_IdentityHashMap {
     public static void main(String[] args) {
         IdentityHashMap<String, String> idMap = new IdentityHashMap<>();
 
