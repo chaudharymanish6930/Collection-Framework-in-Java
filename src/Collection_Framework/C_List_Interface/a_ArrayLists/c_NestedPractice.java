@@ -1,4 +1,4 @@
-package Collection_Framework.C_List_Interface.ArrayLists;
+package Collection_Framework.C_List_Interface.a_ArrayLists;
 
 import java.util.ArrayList;
 import java.util.Scanner;
